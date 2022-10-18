@@ -1,0 +1,159 @@
+\documentclass{article}
+\usepackage[a4paper,left=3.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+%%\usepackage[MeX]{polski}
+%%\usepackage[cp1250]{inputenc}
+\usepackage{polski}
+\usepackage{lipsum}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{hyperref}
+\usepackage{makeidx}
+\usepackage[tableposition=top]{caption}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{amsmath} %pakiet matematyczny
+\usepackage{amssymb} %pakiet dodatkowych symboli
+\usepackage{algorithmic}
+
+\title{Programy użytkowe Ćwiczenia 2}
+\author{Maciej Góralczyk}
+\date{18 Października 2022}
+
+\begin{document}
+\maketitle
+
+\setcounter{equation}{10}
+\begin{equation}
+    \label{eq:limes}
+    \lim_{x \to \infty} \sum_{k=1}^{n} \frac{1}{k^2} = \frac{\pi^2}{6}
+\end{equation}
+
+\begin{equation}
+    \label{eq:prod}
+    \prod_{i=2}^{n=i^2} = \frac{\lim^{n \to 4}\left(1 + \frac{1}{n}\right)^n}{\sum k\left(\frac{1}{n}\right)}
+\end{equation}
+
+Łatwo równanie \ref{eq:limes} jest doprowadzić do \ref{eq:prod}
+
+\begin{equation}
+    \int_2^\infty \frac{1}{\log_{2}x}dx = \frac{1}{x}\sin{x} = 1 - \cos^2(x)
+\end{equation}
+
+\begin{equation}
+    \left[\begin{array}{cccc}
+    a_{11} & a_{12} & \ldots & a_{1K} \\
+    a_{21} & a_{22} & \ldots & a_{2K} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{K1} & a_{K2} & \ldots & a_{KK}
+    \end{array}\right] * \left[\begin{array}{c}
+    x_1 \\
+    x_2 \\
+    \vdots \\
+    x_K
+    \end{array}\right] = \left[\begin{array}{c}
+    b_1 \\
+    b_2 \\
+    \vdots \\
+    b_K
+    \end{array}\right]
+\end{equation}
+
+\begin{equation}
+    (a_1 = a_1(x)) \wedge (a_2 = a_2(x)) \wedge...\wedge(a_k = a_k(x))\Rightarrow(d = d(u))
+\end{equation}
+
+\begin{equation}
+    [x]_A = \{y \in U : a(x) = a(y), \forall a \in A\}, \textrm{where the central object } x \in U
+\end{equation}
+
+\begin{equation}
+    g(u, r) = \{ v \in U : \frac{card\{IND(u, v)\}}{card\{A\}|} \geq r\}
+\end{equation}
+
+\begin{equation}
+    \textrm{where}, IND(u, v) = \{a \in A : a(u) = a(v)\}
+\end{equation}
+
+\begin{equation}
+    T : [0, 1] \times [0, 1] \rightarrow [0, 1],
+\end{equation}
+
+\begin{equation}
+    \cos(20) = \cos^{2}0 - \sin^{2}0
+\end{equation}
+
+\begin{equation}
+    \lim_{x \to \infty} \exp(-x) = 0
+\end{equation}
+
+\begin{equation}
+    \frac{n!}{k!(n - k)!} = {n \choose k}
+\end{equation}
+
+\begin{equation}
+    P\Big(A = 2\bigg|\frac{A^2}{B} > 4\Big)
+\end{equation}
+
+\begin{equation}
+    S^{c_i}(a) = \frac{(\bar{C}_i^a - \hat{C}_i^a)^2}{Z_{\bar{C}_i^{a^2}} + Z_{\hat{C}_i^{a^2}}}, a \in A.
+\end{equation}
+
+\begin{equation}
+    C_i^a = \{a(u) : u \in U \textrm{ and } d(u) = c_i\}.
+\end{equation}
+
+\begin{equation}
+    A_{c_i}(a) = C_i^a \wedge_\varepsilon\{U\backslash C_i^a\}
+\end{equation}
+
+\begin{equation}
+    w(u_q, v_p) = w(u_q, v_p) + \frac{|a(u_q) - a(v_p)|}{(max\_attr_a - min\_attr_a) * \varepsilon}
+\end{equation}
+
+\begin{equation}
+    c'_{ij} = \left\{\begin{array}{c}
+        c_{ij}\ {\rm gdy}\ d(x_i) \neq d(x_j) \\
+        \phi\ {\rm gdy}\ d(x_i)=d(x_j).
+    \end{array}
+    \right.
+\end{equation}
+
+\begin{algorithmic}
+\STATE{22)Procedure}
+\STATE{Input data}
+\STATE{$A’ \leftarrow \emptyset$ }
+\STATE{$iter \leftarrow 0$}
+\FOR {i = 1, 2, ..., card \{A\}}
+\FOR {j = 1, 2, ..., k}
+\STATE{$S^{c_j}(a)=S{i}^{c_j}(a)$}
+\IF{$a \ not \ i n A’ $}
+\item {$A’ \ l e f t a r r o w \ a$}
+\item {$iter \leftarrow iter +1$}
+\IF{$iter = fixed \ number \ of \ the \ best \ genes$ }
+\item{BREAK}
+\ENDIF
+\ENDIF
+\ENDFOR
+\IF{$iter = fixed \ number \ of \ the \ best \ genes$ }
+\item{BREAK}
+\ENDIF
+\ENDFOR
+\RETURN{$A’ $}
+\end{algorithmic}
+
+\begin{equation}
+    S_1^{c_1}(a) > S_2^{c_1}(a) > ... > S_{card\{A\}}^{c_1}(a)
+\end{equation}
+
+\begin{equation}
+    S_1^{c_2}(a) > S_2^{c_2}(a) > ... > S_{card\{A\}}^{c_2}(a)
+\end{equation}
+
+$$\vdots$$
+
+\begin{equation}
+    S_1^{c_k}(a) > S_2^{c_k}(a) > ... > S_{card\{A\}}^{c_k}(a)
+\end{equation}
+
+\end{document}
