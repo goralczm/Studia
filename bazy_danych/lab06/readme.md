@@ -91,3 +91,27 @@ AND z.rodzaj = 'jedzenie'
 ORDER BY wiek ASC
 LIMIT 5;
 ```
+```sql=
+SELECT k1.nazwa, k2.nazwa
+FROM kreatura AS k1
+INNER JOIN kreatura AS k2
+ON k1.idKreatury + 5 = k2.idKreatury;
+```
+
+## Zadanie 5
+```sql=
+SELECT * FROM kreatura;
+SELECT * FROM ekwipunek;
+SELECT * FROM zasob;
+```
+```sql=
+SELECT k.rodzaj, AVG(z.waga * z.ilosc * e.ilosc) FROM kreatura AS k,
+ekwipunek AS e,
+zasob AS z
+WHERE e.idKreatury = k.idKreatury
+AND e.idZasobu = z.idZasobu
+AND k.rodzaj != 'malpa'
+AND k.rodzaj != 'waz'
+GROUP BY k.rodzaj
+HAVING SUM(e.ilosc) < 30;
+```
