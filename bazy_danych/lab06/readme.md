@@ -1,4 +1,4 @@
-# Bazy Danych Lab 5
+# Bazy Danych Lab 6
 
 ## Zadanie 1
 ```sql=
